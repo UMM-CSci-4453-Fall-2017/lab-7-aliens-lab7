@@ -11,11 +11,12 @@
 <div class="container-fluid">
     <h1>Cash Register</h1>
     <div id="buttons" ng-controller="buttonCtrl" >
-    <div ng-repeat="button in buttons">
-    <div style="position:absolute;left:{{button.left}}px;top:{{button.top}}px"><button id="{{button.buttonID}}" >{{button.label}}</button></div>
-    </div>
+      <div ng-repeat="button in buttons">
+        <div ng-hide="button.hidden" style="position:absolute;left:{{button.left}}px;top:{{button.top}}px">
+          <button id="{{button.buttonID}}" >{{button.label}}</button>
+        </div>
+      </div>
     </div>
 </div>
 </body>
 </html>
-
